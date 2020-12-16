@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 16, 2020 at 02:04 PM
+-- Generation Time: Dec 16, 2020 at 02:19 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -69,8 +69,8 @@ CREATE TABLE `keys` (
 --
 
 INSERT INTO `keys` (`id`, `user_id`, `key`, `level`, `ignore_limits`, `is_private_key`, `ip_addresses`, `date_created`) VALUES
-(1, 1, '112233', 1, 0, 0, '1', 1),
-(2, 2, '445566', 1, 0, 0, '1', 1);
+(1, 1, '1234', 1, 0, 0, '1', 1),
+(2, 2, '4567', 1, 0, 0, '1', 1);
 
 -- --------------------------------------------------------
 
@@ -91,10 +91,9 @@ CREATE TABLE `limits` (
 --
 
 INSERT INTO `limits` (`id`, `uri`, `count`, `hour_started`, `api_key`) VALUES
-(1, 'uri:Baju_adat/index:get', 2, 1607878463, '112233'),
-(2, 'method-name:index_get', 2, 1607878672, '112233'),
 (3, 'api-key:112233', 2, 1608121982, '112233'),
-(4, 'api-key:445566', 6, 1608120297, '445566');
+(4, 'api-key:445566', 6, 1608120297, '445566'),
+(5, 'api-key:1234', 1, 1608124726, '1234');
 
 --
 -- Indexes for dumped tables
@@ -125,7 +124,7 @@ ALTER TABLE `keys`
 -- AUTO_INCREMENT for table `limits`
 --
 ALTER TABLE `limits`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
